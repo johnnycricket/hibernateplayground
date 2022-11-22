@@ -1,0 +1,25 @@
+spring:
+  flyway:
+    user: "default"
+    enabled: true
+    url: "jdbc:postgresql://localhost:5432/playground-db"
+    driver-class-name: org.postgresql.Driver
+    password: "default"
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: "default"
+    password: "default"
+    url: "jdbc:postgresql://localhost:5432/playground-db"
+    platform: postgres
+    initialization-mode: always
+    continue-on-error: true
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: validate
+      show-sql: true
+    database: postgresql
+    properties:
+      hibernate:
+        default_batch_fetch_size: 200
